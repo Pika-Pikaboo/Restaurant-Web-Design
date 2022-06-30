@@ -1,0 +1,109 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 40px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo {
+    width: 150px;
+}
+
+.menu {
+    width: 65px;
+}
+
+.nav a,
+.left-col a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-size: 1.25rem;
+    margin-right: 40px;
+}
+
+.nav a {
+    position: relative;
+    padding: 10px;
+}
+
+.nav a::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #d9f688;
+    z-index: -1;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    transition: height 0.5s ease;
+}
+
+.nav a:hover::before {
+    height: 85px;
+}
+
+.left-col a {
+    font-weight: bold;
+    margin-top: 50px;
+    padding: 15px 30px;
+    border-radius: 30px;
+    background-color: rgba(176, 176, 4, 0.727);
+    box-shadow: 6px 6px 8px 4px #eee;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 40px;
+}
+
+.left-col,
+.right-col {
+    flex-basis: 50%;
+}
+
+.left-col h1 {
+    font-size: 40px;
+    line-height: 1.5;
+}
+
+.right-col {
+    position: relative;
+}
+
+.pic-1 {
+    width: 550px;
+}
+
+.pic-2 {
+    position: absolute;
+    width: 250px;
+    bottom: -10px;
+    left: 0;
+    box-shadow: 6px 6px 8px 4px #eee;
+}
